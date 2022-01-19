@@ -28,6 +28,11 @@ namespace Accounting.DataLayer.Context
             }
         }
 
+        public void Save()
+        {
+            db.SaveChanges();
+        }
+
         public void Dispose()
         {
             db.Dispose();

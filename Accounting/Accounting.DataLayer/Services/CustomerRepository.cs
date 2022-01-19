@@ -73,11 +73,6 @@ namespace Accounting.DataLayer.Services
             }
         }
 
-        public void save()
-        {
-            db.SaveChanges();
-        }
-
         public bool UpdateCustomer(customers customer)
         {
             try

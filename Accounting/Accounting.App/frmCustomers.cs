@@ -47,5 +47,28 @@ namespace Accounting.App
                 digiCustomers.DataSource = db.CustomerRepository.GetCustomersByFileter(txtFilter.Text);
             }
         }
+
+        private void btnDeleteCustomer_Click(object sender, EventArgs e)
+        {
+            if (digiCustomers.CurrentRow != null)
+            {
+                using (UnitOfWork db = new UnitOfWork())
+                {
+                    string name = digiCustomers.CurrentRow.Cells[1].Value.ToString();
+                    if (RtlMessageBox.Show($"آیا از حذف {name}مطمن هستید؟", "توحه",MessageBoxButtons.YesNo,MessageBoxIcon.Warning)==DialogResult.Yes)
+                    {
+                        int customerId = int.Parse(digiCustomers.CurrentRow.Cells[0].Value.ToString());
+                        db.CustomerRepository.DeleteCustomer(customerId);
+                        db.Save();
+                        Bindgrid();
+                    }
+                    
+                }
+            }   
+            else
+            {
+                RtlMessageBox.Show("لطفا خطی را انتخاب کنید");
+            }
+        }
     }
 }
