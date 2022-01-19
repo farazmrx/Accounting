@@ -223,6 +223,16 @@ namespace Accounting.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap photo_2022_01_19_08_40_40 {
+            get {
+                object obj = ResourceManager.GetObject("photo_2022_01_19_08_40_40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap servicesCosts {
             get {
                 object obj = ResourceManager.GetObject("servicesCosts", resourceCulture);

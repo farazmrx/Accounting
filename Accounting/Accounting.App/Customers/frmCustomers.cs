@@ -70,5 +70,17 @@ namespace Accounting.App
                 RtlMessageBox.Show("لطفا خطی را انتخاب کنید");
             }
         }
+
+        private void btnAddNewCustomer_Click(object sender, EventArgs e)
+        {
+            frmAddOrEditCustomer frmAdd = new frmAddOrEditCustomer();
+            if (frmAdd.ShowDialog() == DialogResult.OK)
+            {
+                Bindgrid();
+            }
+            {
+                
+            }
+        }
     }
 }
