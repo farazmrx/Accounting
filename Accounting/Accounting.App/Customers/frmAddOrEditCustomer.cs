@@ -16,6 +16,8 @@ namespace Accounting.App
 {
     public partial class frmAddOrEditCustomer : Form
     {
+        public int customerId = 0;
+
         private UnitOfWork db = new UnitOfWork();
 
         public frmAddOrEditCustomer()
@@ -54,9 +56,32 @@ namespace Accounting.App
                     Mobile = txtMobile.Text,
                     CustomerImage = ImageName
                 };
-                db.CustomerRepository.InsertCustomer(customers);
+                if (customerId == 0)
+                {
+                    db.CustomerRepository.InsertCustomer(customers);
+                }
+                else
+                {
+                    customers.CustomersID = customerId;
+                    db.CustomerRepository.UpdateCustomer(customers);
+                }
                 db.Save();
                 DialogResult = DialogResult.OK;
+            }
+        }
+
+        private void frmAddOrEditCustomer_Load(object sender, EventArgs e)
+        {
+            if (customerId != 0)
+            {
+                this.Text = "ویرایش شخص";
+                btnSave.Text = "ویرایش";
+                var customer = db.CustomerRepository.GetCustomerbyId(customerId);
+                txtEmail.Text = customer.Email;
+                txtAdress.Text = customer.Address;
+                txtMobile.Text = customer.Mobile;
+                txtName.Text = customer.FullName;
+                pcCustomer.ImageLocation = Application.StartupPath + "/Images/" + customer.CustomerImage;
             }
         }
     }

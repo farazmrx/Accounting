@@ -82,5 +82,19 @@ namespace Accounting.App
                 
             }
         }
+
+        private void btnEditCustomer_Click(object sender, EventArgs e)
+        {
+            if (digiCustomers.CurrentRow != null)
+            {
+                int customerId = int.Parse(digiCustomers.CurrentRow.Cells[0].Value.ToString());
+                frmAddOrEditCustomer frmAddOrEdit = new frmAddOrEditCustomer();
+                frmAddOrEdit.customerId = customerId;
+                if (frmAddOrEdit.ShowDialog()== DialogResult.OK)
+                {
+                    Bindgrid();
+                }
+            }
+        }
     }
 }
