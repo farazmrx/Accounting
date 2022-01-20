@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Text;
 using System.Threading.Tasks;
 using Accounting.DataLayer.Repositories;
+using Accounting.ViewModels.Customers;
 
 namespace Accounting.DataLayer.Services
 {
@@ -91,6 +92,24 @@ namespace Accounting.DataLayer.Services
             //   {
             //       return false;
             //   }
+        }
+
+        public List<ListCustomerViewModel> GetNameCustomers(string filter = "")
+        {
+            if (filter == "")
+            {
+                return db.customers.Select(c => new ListCustomerViewModel()
+                {
+                    CustomerID = c.CustomersID,
+                    FullName = c.FullName
+                }).ToList();
+            }
+
+            return db.customers.Where(c => c.FullName.Contains(filter)).Select(c => new ListCustomerViewModel()
+            {
+                CustomerID = c.CustomersID,
+                FullName = c.FullName
+            }).ToList();
         }
     }
 }

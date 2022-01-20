@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Accounting.ViewModels.Customers;
 
 namespace Accounting.DataLayer.Repositories
 {
@@ -11,6 +12,8 @@ namespace Accounting.DataLayer.Repositories
         List<customers> GetAllCustomers();
 
         IEnumerable<customers> GetCustomersByFileter(string parameter);
+
+        List<ListCustomerViewModel> GetNameCustomers(string filter = "");
 
         customers GetCustomerbyId(int customerId);
 

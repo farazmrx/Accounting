@@ -108,5 +108,11 @@
       <LastGenOutput>AccountingModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Accounting.ViewModels\Accounting.ViewModels.csproj">
+      <Project>{2e75bc0f-9a1b-4b6d-bb2c-385115aafd09}</Project>
+      <Name>Accounting.ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
