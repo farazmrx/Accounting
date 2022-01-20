@@ -50,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accounting.cs">
+      <DependentUpon>AccountingModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="AccountingModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -64,6 +67,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AccountingModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountingTypes.cs">
+      <DependentUpon>AccountingModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\UnitOfWork.cs" />
     <Compile Include="customers.cs">
