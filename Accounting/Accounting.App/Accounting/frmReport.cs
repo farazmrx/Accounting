@@ -58,15 +58,38 @@ namespace Accounting.App
             using (UnitOfWork db = new UnitOfWork())
             {
                 List<DataLayer.Accounting> result = new List<DataLayer.Accounting>();
-                if ((int)cbCustomer.SelectedValue !=0)
+
+                DateTime? startDate;
+                DateTime? endDate;
+
+                if ((int)cbCustomer.SelectedValue != 0)
                 {
                     int customerId = int.Parse(cbCustomer.SelectedValue.ToString());
-                    result.AddRange(db.AccountingRepository.Get(a => a.TypeID == TypeID && a.CustomerID==customerId));
+                    result.AddRange(db.AccountingRepository.Get(a => a.TypeID == TypeID && a.CustomerID == customerId));
                 }
                 else
                 {
                     result.AddRange(db.AccountingRepository.Get(a => a.TypeID == TypeID));
                 }
+
+                if (txtFromDate.Text != "    /  /")
+                {
+                    startDate = Convert.ToDateTime(txtFromDate.Text);
+                    startDate = DateConvertor.ToMiladi(startDate.Value);
+                    result = result.Where(r => r.DateTime >= startDate.Value).ToList();
+                }
+
+                if (txtFromDate.Text != "    /  /")
+                {
+                    endDate = Convert.ToDateTime(txtToDate.Text);
+                    endDate = DateConvertor.ToMiladi(endDate.Value);
+                    result = result.Where(r => r.DateTime <= endDate.Value).ToList();
+                }
+
+
+                
+
+
                 //dgReport.AutoGenerateColumns = false;
                 //dgReport.DataSource = result;
                 dgReport.Rows.Clear();
