@@ -46,8 +46,25 @@ namespace Accounting.App
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lblDate.Text = DateTime.Now.ToShamsi();
-            lblTime.Text = DateTime.Now.ToShortTimeString();
+            this.Hide();
+            frmLogin frmLogin = new frmLogin();
+            if (frmLogin.ShowDialog()==DialogResult.OK)
+            {
+                this.Show();
+                lblDate.Text = DateTime.Now.ToShamsi();
+                lblTime.Text = DateTime.Now.ToShortTimeString();
+            }
+            else
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnEditLogin_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.IsEdit = true;
+            frmLogin.ShowDialog();
         }
     }
 }
