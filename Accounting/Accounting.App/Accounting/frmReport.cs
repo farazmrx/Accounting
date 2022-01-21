@@ -65,7 +65,7 @@ namespace Accounting.App
                 }
                 else
                 {
-                    result.AddRange(db.AccountingRepository.Get(a => a.TypeID == TypeID);
+                    result.AddRange(db.AccountingRepository.Get(a => a.TypeID == TypeID));
                 }
                 //dgReport.AutoGenerateColumns = false;
                 //dgReport.DataSource = result;
