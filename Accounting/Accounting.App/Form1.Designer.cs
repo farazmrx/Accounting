@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btnCustomers = new System.Windows.Forms.ToolStripButton();
             this.btnNewAccounting = new System.Windows.Forms.ToolStripButton();
-            this.btnReportRecive = new System.Windows.Forms.ToolStripButton();
             this.btnReportPay = new System.Windows.Forms.ToolStripButton();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.btnReportRecive = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +49,15 @@
             this.toolStrip1.Size = new System.Drawing.Size(784, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(63, 22);
+            this.toolStripDropDownButton1.Text = "تنظیمات";
             // 
             // toolStrip2
             // 
@@ -85,18 +94,6 @@
             this.btnNewAccounting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNewAccounting.Click += new System.EventHandler(this.btnNewAccounting_Click);
             // 
-            // btnReportRecive
-            // 
-            this.btnReportRecive.Image = global::Accounting.App.Properties.Resources._1371476499_todo_list;
-            this.btnReportRecive.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnReportRecive.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnReportRecive.Name = "btnReportRecive";
-            this.btnReportRecive.Size = new System.Drawing.Size(97, 59);
-            this.btnReportRecive.Text = "گزارش پرداختی ها";
-            this.btnReportRecive.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnReportRecive.ToolTipText = "گزارش دریافتی ها";
-            this.btnReportRecive.Click += new System.EventHandler(this.btnReportRecive_Click);
-            // 
             // btnReportPay
             // 
             this.btnReportPay.Image = global::Accounting.App.Properties.Resources._1370791030_credit_card;
@@ -108,14 +105,16 @@
             this.btnReportPay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnReportPay.Click += new System.EventHandler(this.btnReportPay_Click);
             // 
-            // toolStripDropDownButton1
+            // btnReportRecive
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(63, 22);
-            this.toolStripDropDownButton1.Text = "تنظیمات";
+            this.btnReportRecive.Image = global::Accounting.App.Properties.Resources._1371476499_todo_list;
+            this.btnReportRecive.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnReportRecive.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReportRecive.Name = "btnReportRecive";
+            this.btnReportRecive.Size = new System.Drawing.Size(98, 59);
+            this.btnReportRecive.Text = "گزارش دریافتی ها";
+            this.btnReportRecive.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnReportRecive.Click += new System.EventHandler(this.btnReportRecive_Click);
             // 
             // Form1
             // 

@@ -15,7 +15,9 @@ namespace Accounting.App
 {
     public partial class frmNewAccounting : Form
     {
-        UnitOfWork db = new UnitOfWork();
+        private UnitOfWork db;
+
+        public int AccountID = 0;
 
         public frmNewAccounting()
         {
@@ -24,8 +26,28 @@ namespace Accounting.App
 
         private void frmNewAccounting_Load(object sender, EventArgs e)
         {
+            db = new UnitOfWork();
             dgvCustomers.AutoGenerateColumns = false;
             dgvCustomers.DataSource = db.CustomerRepository.GetNameCustomers();
+            if (AccountID != 0)
+            {
+                var account = db.AccountingRepository.GetById(AccountID);
+                txtAmount.Text = account.Amount.ToString();
+                txtDescription.Text = account.Description;
+                txtName.Text = db.CustomerRepository.GetCustomerNameById(account.CustomerID);
+                if (account.TypeID == 1)
+                {
+                    rbRecive.Checked = true;
+                }
+                else
+                {
+                    rbPay.Checked = true;
+                }
+
+                this.Text = "ویرایش";
+                btnSave.Text = "ویرایش";
+                db.Dispose();
+            }
         }
 
         private void txtFilter_TextChanged(object sender, EventArgs e)
@@ -45,6 +67,7 @@ namespace Accounting.App
             {
                 if (rbPay.Checked || rbRecive.Checked)
                 {
+                    db = new UnitOfWork();
                     DataLayer.Accounting accounting = new DataLayer.Accounting()
                     {
                         Amount = int.Parse(txtAmount.Value.ToString()),
@@ -53,8 +76,19 @@ namespace Accounting.App
                         DateTime = DateTime.Now,
                         Description = txtDescription.Text
                     };
-                    db.AccountingRepository.Insert(accounting);
+                    if (AccountID == 0)
+                    {
+                        db.AccountingRepository.Insert(accounting);
+                        db.Save();
+                    }
+                    else
+                    {
+                        accounting.ID = AccountID;
+                        db.AccountingRepository.Update(accounting);
+
+                    }
                     db.Save();
+                    db.Dispose();
                     DialogResult = DialogResult.OK;
                 }
                 else

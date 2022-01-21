@@ -77,5 +77,20 @@ namespace Accounting.App
                 }
             }
         }
+
+        private void btbEdit_Click(object sender, EventArgs e)
+        {
+            if (dgReport.CurrentRow != null)
+            {
+                int id = int.Parse(dgReport.CurrentRow.Cells[0].Value.ToString());
+                frmNewAccounting frmnew = new frmNewAccounting();
+                frmnew.AccountID = id;
+                if (frmnew.ShowDialog()==DialogResult.OK)
+                {
+                    Filter();
+                }
+            }
+        }
     }
+
 }

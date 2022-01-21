@@ -34,13 +34,13 @@
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             this.btnPrint = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbCustomer = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtFromDate = new System.Windows.Forms.MaskedTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtToDate = new System.Windows.Forms.MaskedTextBox();
             this.btnFilter = new System.Windows.Forms.Button();
+            this.txtToDate = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtFromDate = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbCustomer = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dgReport = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +74,7 @@
             this.btbEdit.Size = new System.Drawing.Size(47, 59);
             this.btbEdit.Text = "ویرایش";
             this.btbEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btbEdit.Click += new System.EventHandler(this.btbEdit_Click);
             // 
             // btnDelete
             // 
@@ -125,49 +126,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "جستجو";
             // 
-            // label1
+            // btnFilter
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(587, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "طرف حساب:";
-            // 
-            // cbCustomer
-            // 
-            this.cbCustomer.FormattingEnabled = true;
-            this.cbCustomer.Location = new System.Drawing.Point(460, 14);
-            this.cbCustomer.Name = "cbCustomer";
-            this.cbCustomer.Size = new System.Drawing.Size(121, 21);
-            this.cbCustomer.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(412, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "از تاریخ:";
-            // 
-            // txtFromDate
-            // 
-            this.txtFromDate.Location = new System.Drawing.Point(306, 14);
-            this.txtFromDate.Mask = "0000/00/00";
-            this.txtFromDate.Name = "txtFromDate";
-            this.txtFromDate.Size = new System.Drawing.Size(100, 21);
-            this.txtFromDate.TabIndex = 3;
-            this.txtFromDate.ValidatingType = typeof(System.DateTime);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(259, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "تا تاریخ:";
+            this.btnFilter.Location = new System.Drawing.Point(39, 12);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(108, 23);
+            this.btnFilter.TabIndex = 6;
+            this.btnFilter.Text = "انجام";
+            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // txtToDate
             // 
@@ -178,15 +145,49 @@
             this.txtToDate.TabIndex = 5;
             this.txtToDate.ValidatingType = typeof(System.DateTime);
             // 
-            // btnFilter
+            // label3
             // 
-            this.btnFilter.Location = new System.Drawing.Point(39, 12);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(108, 23);
-            this.btnFilter.TabIndex = 6;
-            this.btnFilter.Text = "انجام";
-            this.btnFilter.UseVisualStyleBackColor = true;
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(259, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "تا تاریخ:";
+            // 
+            // txtFromDate
+            // 
+            this.txtFromDate.Location = new System.Drawing.Point(306, 14);
+            this.txtFromDate.Mask = "0000/00/00";
+            this.txtFromDate.Name = "txtFromDate";
+            this.txtFromDate.Size = new System.Drawing.Size(100, 21);
+            this.txtFromDate.TabIndex = 3;
+            this.txtFromDate.ValidatingType = typeof(System.DateTime);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(412, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "از تاریخ:";
+            // 
+            // cbCustomer
+            // 
+            this.cbCustomer.FormattingEnabled = true;
+            this.cbCustomer.Location = new System.Drawing.Point(460, 14);
+            this.cbCustomer.Name = "cbCustomer";
+            this.cbCustomer.Size = new System.Drawing.Size(121, 21);
+            this.cbCustomer.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(587, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "طرف حساب:";
             // 
             // dgReport
             // 
