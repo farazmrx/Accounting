@@ -252,5 +252,11 @@
   <ItemGroup>
     <None Include="Resources\arrows-reload-2848.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie-chart-683.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tax-calculator-9258.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -293,9 +293,29 @@ namespace Accounting.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pie_chart_683 {
+            get {
+                object obj = ResourceManager.GetObject("pie_chart_683", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap servicesCosts {
             get {
                 object obj = ResourceManager.GetObject("servicesCosts", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tax_calculator_9258 {
+            get {
+                object obj = ResourceManager.GetObject("tax_calculator_9258", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

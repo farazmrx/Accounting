@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Accounting.Utility.Convertor;
 
 namespace Accounting.App
 {
@@ -41,6 +42,12 @@ namespace Accounting.App
             frmReport frmReport = new frmReport();
             frmReport.TypeID = 1;
             frmReport.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            lblDate.Text = DateTime.Now.ToShamsi();
+            lblTime.Text = DateTime.Now.ToShortTimeString();
         }
     }
 }
