@@ -93,10 +93,9 @@
             this.btnRefresh.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(47, 59);
-            this.btnRefresh.Text = "ویرایش";
+            this.btnRefresh.Size = new System.Drawing.Size(60, 59);
+            this.btnRefresh.Text = "بروزرسانی";
             this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnRefresh.ToolTipText = "بروزرسانی";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnPrint

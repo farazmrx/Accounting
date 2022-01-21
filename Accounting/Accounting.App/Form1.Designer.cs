@@ -68,50 +68,50 @@
             this.btnReportRecive});
             this.toolStrip2.Location = new System.Drawing.Point(0, 25);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(784, 62);
+            this.toolStrip2.Size = new System.Drawing.Size(784, 86);
             this.toolStrip2.TabIndex = 1;
             this.toolStrip2.Text = "toolStrip2";
             // 
             // btnCustomers
             // 
-            this.btnCustomers.Image = global::Accounting.App.Properties.Resources._1371476468_preferences_contact_list;
+            this.btnCustomers.Image = global::Accounting.App.Properties.Resources.user_group_307;
             this.btnCustomers.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCustomers.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCustomers.Name = "btnCustomers";
-            this.btnCustomers.Size = new System.Drawing.Size(71, 59);
+            this.btnCustomers.Size = new System.Drawing.Size(71, 83);
             this.btnCustomers.Text = "طرف حساب";
             this.btnCustomers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
             // 
             // btnNewAccounting
             // 
-            this.btnNewAccounting.Image = global::Accounting.App.Properties.Resources.servicesCosts;
+            this.btnNewAccounting.Image = global::Accounting.App.Properties.Resources.coin_794;
             this.btnNewAccounting.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnNewAccounting.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNewAccounting.Name = "btnNewAccounting";
-            this.btnNewAccounting.Size = new System.Drawing.Size(72, 59);
+            this.btnNewAccounting.Size = new System.Drawing.Size(72, 83);
             this.btnNewAccounting.Text = "تراکنش جدید";
             this.btnNewAccounting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNewAccounting.Click += new System.EventHandler(this.btnNewAccounting_Click);
             // 
             // btnReportPay
             // 
-            this.btnReportPay.Image = global::Accounting.App.Properties.Resources._1370791030_credit_card;
+            this.btnReportPay.Image = global::Accounting.App.Properties.Resources.cash_payment_6401;
             this.btnReportPay.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReportPay.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReportPay.Name = "btnReportPay";
-            this.btnReportPay.Size = new System.Drawing.Size(97, 59);
+            this.btnReportPay.Size = new System.Drawing.Size(97, 83);
             this.btnReportPay.Text = "گزارش پرداختی ها";
             this.btnReportPay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnReportPay.Click += new System.EventHandler(this.btnReportPay_Click);
             // 
             // btnReportRecive
             // 
-            this.btnReportRecive.Image = global::Accounting.App.Properties.Resources._1371476499_todo_list;
+            this.btnReportRecive.Image = global::Accounting.App.Properties.Resources.money_payment_6400;
             this.btnReportRecive.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReportRecive.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReportRecive.Name = "btnReportRecive";
-            this.btnReportRecive.Size = new System.Drawing.Size(98, 59);
+            this.btnReportRecive.Size = new System.Drawing.Size(98, 83);
             this.btnReportRecive.Text = "گزارش دریافتی ها";
             this.btnReportRecive.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnReportRecive.Click += new System.EventHandler(this.btnReportRecive_Click);

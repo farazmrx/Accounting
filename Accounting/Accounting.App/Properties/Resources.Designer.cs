@@ -213,9 +213,69 @@ namespace Accounting.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_user_302 {
+            get {
+                object obj = ResourceManager.GetObject("add_user_302", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap arrows_reload_2848 {
+            get {
+                object obj = ResourceManager.GetObject("arrows_reload_2848", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cash_payment_6401 {
+            get {
+                object obj = ResourceManager.GetObject("cash_payment_6401", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coin_794 {
+            get {
+                object obj = ResourceManager.GetObject("coin_794", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap list2 {
             get {
                 object obj = ResourceManager.GetObject("list2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap manage_315 {
+            get {
+                object obj = ResourceManager.GetObject("manage_315", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap money_payment_6400 {
+            get {
+                object obj = ResourceManager.GetObject("money_payment_6400", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +296,26 @@ namespace Accounting.App.Properties {
         internal static System.Drawing.Bitmap servicesCosts {
             get {
                 object obj = ResourceManager.GetObject("servicesCosts", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_group_307 {
+            get {
+                object obj = ResourceManager.GetObject("user_group_307", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_logout_304 {
+            get {
+                object obj = ResourceManager.GetObject("user_logout_304", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

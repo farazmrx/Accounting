@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnAddNewCustomer = new System.Windows.Forms.ToolStripButton();
-            this.btnEditCustomer = new System.Windows.Forms.ToolStripButton();
-            this.btnDeleteCustomer = new System.Windows.Forms.ToolStripButton();
-            this.btnRefreshCustomer = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.txtFilter = new System.Windows.Forms.ToolStripTextBox();
             this.digiCustomers = new System.Windows.Forms.DataGridView();
@@ -40,6 +36,10 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddNewCustomer = new System.Windows.Forms.ToolStripButton();
+            this.btnEditCustomer = new System.Windows.Forms.ToolStripButton();
+            this.btnDeleteCustomer = new System.Windows.Forms.ToolStripButton();
+            this.btnRefreshCustomer = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.digiCustomers)).BeginInit();
             this.SuspendLayout();
@@ -55,64 +55,20 @@
             this.txtFilter});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(584, 62);
+            this.toolStrip1.Size = new System.Drawing.Size(584, 86);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // btnAddNewCustomer
-            // 
-            this.btnAddNewCustomer.Image = global::Accounting.App.Properties.Resources._1371475930_filenew;
-            this.btnAddNewCustomer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnAddNewCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAddNewCustomer.Name = "btnAddNewCustomer";
-            this.btnAddNewCustomer.Size = new System.Drawing.Size(70, 59);
-            this.btnAddNewCustomer.Text = "شخص جدید";
-            this.btnAddNewCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnAddNewCustomer.Click += new System.EventHandler(this.btnAddNewCustomer_Click);
-            // 
-            // btnEditCustomer
-            // 
-            this.btnEditCustomer.Image = global::Accounting.App.Properties.Resources._1371475973_document_edit;
-            this.btnEditCustomer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnEditCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEditCustomer.Name = "btnEditCustomer";
-            this.btnEditCustomer.Size = new System.Drawing.Size(83, 59);
-            this.btnEditCustomer.Text = "ویرایش شخص";
-            this.btnEditCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnEditCustomer.Click += new System.EventHandler(this.btnEditCustomer_Click);
-            // 
-            // btnDeleteCustomer
-            // 
-            this.btnDeleteCustomer.Image = global::Accounting.App.Properties.Resources._1371476007_Close_Box_Red;
-            this.btnDeleteCustomer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnDeleteCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnDeleteCustomer.Name = "btnDeleteCustomer";
-            this.btnDeleteCustomer.Size = new System.Drawing.Size(72, 59);
-            this.btnDeleteCustomer.Text = "حذف شخص";
-            this.btnDeleteCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
-            // 
-            // btnRefreshCustomer
-            // 
-            this.btnRefreshCustomer.Image = global::Accounting.App.Properties.Resources._1371476342_Refresh;
-            this.btnRefreshCustomer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnRefreshCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRefreshCustomer.Name = "btnRefreshCustomer";
-            this.btnRefreshCustomer.Size = new System.Drawing.Size(60, 59);
-            this.btnRefreshCustomer.Text = "بروزرسانی";
-            this.btnRefreshCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnRefreshCustomer.Click += new System.EventHandler(this.btnRefreshCustomer_Click);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(44, 59);
+            this.toolStripLabel1.Size = new System.Drawing.Size(44, 83);
             this.toolStripLabel1.Text = "جستجو:";
             // 
             // txtFilter
             // 
             this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(100, 62);
+            this.txtFilter.Size = new System.Drawing.Size(100, 86);
             this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
             // 
             // digiCustomers
@@ -127,10 +83,10 @@
             this.Column2,
             this.Column3});
             this.digiCustomers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.digiCustomers.Location = new System.Drawing.Point(0, 62);
+            this.digiCustomers.Location = new System.Drawing.Point(0, 86);
             this.digiCustomers.Name = "digiCustomers";
             this.digiCustomers.ReadOnly = true;
-            this.digiCustomers.Size = new System.Drawing.Size(584, 299);
+            this.digiCustomers.Size = new System.Drawing.Size(584, 275);
             this.digiCustomers.TabIndex = 1;
             // 
             // CustomerID
@@ -161,6 +117,50 @@
             this.Column3.HeaderText = "ایمیل";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            // 
+            // btnAddNewCustomer
+            // 
+            this.btnAddNewCustomer.Image = global::Accounting.App.Properties.Resources.add_user_302;
+            this.btnAddNewCustomer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnAddNewCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAddNewCustomer.Name = "btnAddNewCustomer";
+            this.btnAddNewCustomer.Size = new System.Drawing.Size(70, 83);
+            this.btnAddNewCustomer.Text = "شخص جدید";
+            this.btnAddNewCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAddNewCustomer.Click += new System.EventHandler(this.btnAddNewCustomer_Click);
+            // 
+            // btnEditCustomer
+            // 
+            this.btnEditCustomer.Image = global::Accounting.App.Properties.Resources.manage_315;
+            this.btnEditCustomer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnEditCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEditCustomer.Name = "btnEditCustomer";
+            this.btnEditCustomer.Size = new System.Drawing.Size(83, 83);
+            this.btnEditCustomer.Text = "ویرایش شخص";
+            this.btnEditCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEditCustomer.Click += new System.EventHandler(this.btnEditCustomer_Click);
+            // 
+            // btnDeleteCustomer
+            // 
+            this.btnDeleteCustomer.Image = global::Accounting.App.Properties.Resources.user_logout_304;
+            this.btnDeleteCustomer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnDeleteCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDeleteCustomer.Name = "btnDeleteCustomer";
+            this.btnDeleteCustomer.Size = new System.Drawing.Size(72, 83);
+            this.btnDeleteCustomer.Text = "حذف شخص";
+            this.btnDeleteCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
+            // 
+            // btnRefreshCustomer
+            // 
+            this.btnRefreshCustomer.Image = global::Accounting.App.Properties.Resources.arrows_reload_2848;
+            this.btnRefreshCustomer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnRefreshCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRefreshCustomer.Name = "btnRefreshCustomer";
+            this.btnRefreshCustomer.Size = new System.Drawing.Size(68, 83);
+            this.btnRefreshCustomer.Text = "بروزرسانی";
+            this.btnRefreshCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnRefreshCustomer.Click += new System.EventHandler(this.btnRefreshCustomer_Click);
             // 
             // frmCustomers
             // 

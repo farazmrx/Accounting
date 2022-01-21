@@ -228,5 +228,29 @@
   <ItemGroup>
     <Folder Include="Images\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-payment-6401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin-794.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-group-307.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-payment-6400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-logout-304.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user-302.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manage-315.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrows-reload-2848.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
