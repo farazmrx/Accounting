@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btbEdit = new System.Windows.Forms.ToolStripButton();
-            this.btnDelete = new System.Windows.Forms.ToolStripButton();
-            this.btnRefresh = new System.Windows.Forms.ToolStripButton();
-            this.btnPrint = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnFilter = new System.Windows.Forms.Button();
             this.txtToDate = new System.Windows.Forms.MaskedTextBox();
@@ -47,6 +43,10 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btbEdit = new System.Windows.Forms.ToolStripButton();
+            this.btnDelete = new System.Windows.Forms.ToolStripButton();
+            this.btnRefresh = new System.Windows.Forms.ToolStripButton();
+            this.btnPrint = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgReport)).BeginInit();
@@ -64,50 +64,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(684, 62);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // btbEdit
-            // 
-            this.btbEdit.Image = global::Accounting.App.Properties.Resources._1371475973_document_edit;
-            this.btbEdit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btbEdit.Name = "btbEdit";
-            this.btbEdit.Size = new System.Drawing.Size(47, 59);
-            this.btbEdit.Text = "ویرایش";
-            this.btbEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btbEdit.Click += new System.EventHandler(this.btbEdit_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Image = global::Accounting.App.Properties.Resources._1371476007_Close_Box_Red;
-            this.btnDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(44, 59);
-            this.btnDelete.Text = "حذف";
-            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Image = global::Accounting.App.Properties.Resources._1371476394_refresh_red;
-            this.btnRefresh.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(60, 59);
-            this.btnRefresh.Text = "بروزرسانی";
-            this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Image = global::Accounting.App.Properties.Resources._1371476276_Print;
-            this.btnPrint.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(44, 59);
-            this.btnPrint.Text = " چاپ";
-            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnPrint.ToolTipText = "بروزرسانی";
             // 
             // groupBox1
             // 
@@ -173,6 +129,7 @@
             // 
             // cbCustomer
             // 
+            this.cbCustomer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCustomer.FormattingEnabled = true;
             this.cbCustomer.Location = new System.Drawing.Point(460, 14);
             this.cbCustomer.Name = "cbCustomer";
@@ -240,6 +197,50 @@
             this.Column5.HeaderText = "توضیحات";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            // 
+            // btbEdit
+            // 
+            this.btbEdit.Image = global::Accounting.App.Properties.Resources._1371475973_document_edit;
+            this.btbEdit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btbEdit.Name = "btbEdit";
+            this.btbEdit.Size = new System.Drawing.Size(47, 59);
+            this.btbEdit.Text = "ویرایش";
+            this.btbEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btbEdit.Click += new System.EventHandler(this.btbEdit_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Image = global::Accounting.App.Properties.Resources._1371476007_Close_Box_Red;
+            this.btnDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(44, 59);
+            this.btnDelete.Text = "حذف";
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Image = global::Accounting.App.Properties.Resources._1371476394_refresh_red;
+            this.btnRefresh.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(60, 59);
+            this.btnRefresh.Text = "بروزرسانی";
+            this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Image = global::Accounting.App.Properties.Resources._1371476276_Print;
+            this.btnPrint.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(44, 59);
+            this.btnPrint.Text = " چاپ";
+            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPrint.ToolTipText = "بروزرسانی";
             // 
             // frmReport
             // 

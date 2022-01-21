@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Accounting.DataLayer.Context;
 using Accounting.Utility.Convertor;
+using Accounting.ViewModels.Customers;
 
 namespace Accounting.App
 {
@@ -23,6 +24,19 @@ namespace Accounting.App
 
         private void frmReport_Load(object sender, EventArgs e)
         {
+            using (UnitOfWork db= new UnitOfWork())
+            {
+                List<ListCustomerViewModel> list = new List<ListCustomerViewModel>();
+                list.Add(new ListCustomerViewModel()
+                {
+                    CustomerID = 0,
+                    FullName = "انتخاب کنید"
+                });
+                list.AddRange(db.CustomerRepository.GetNameCustomers());
+                cbCustomer.DataSource = list;
+                cbCustomer.DisplayMember = "FullName";
+                cbCustomer.ValueMember = "CustomerID";
+            }
             if (TypeID ==1)
             {
                 this.Text = "گزارش دریافتی ها";
@@ -43,7 +57,16 @@ namespace Accounting.App
         {
             using (UnitOfWork db = new UnitOfWork())
             {
-                var result = db.AccountingRepository.Get(a => a.TypeID == TypeID);
+                List<DataLayer.Accounting> result = new List<DataLayer.Accounting>();
+                if ((int)cbCustomer.SelectedValue !=0)
+                {
+                    int customerId = int.Parse(cbCustomer.SelectedValue.ToString());
+                    result.AddRange(db.AccountingRepository.Get(a => a.TypeID == TypeID && a.CustomerID==customerId));
+                }
+                else
+                {
+                    result.AddRange(db.AccountingRepository.Get(a => a.TypeID == TypeID);
+                }
                 //dgReport.AutoGenerateColumns = false;
                 //dgReport.DataSource = result;
                 dgReport.Rows.Clear();
