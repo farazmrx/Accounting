@@ -41,10 +41,18 @@
             this.lblDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblRecive = new System.Windows.Forms.Label();
+            this.lblPay = new System.Windows.Forms.Label();
+            this.AccountBalance = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -165,11 +173,78 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.AccountBalance);
+            this.groupBox1.Controls.Add(this.lblPay);
+            this.groupBox1.Controls.Add(this.lblRecive);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(381, 142);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(391, 152);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "گزارش ماهانه";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(336, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = " دریافتی:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(336, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "پرداختی:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(336, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "مانده:";
+            // 
+            // lblRecive
+            // 
+            this.lblRecive.Location = new System.Drawing.Point(93, 32);
+            this.lblRecive.Name = "lblRecive";
+            this.lblRecive.Size = new System.Drawing.Size(209, 24);
+            this.lblRecive.TabIndex = 3;
+            this.lblRecive.Text = "0";
+            // 
+            // lblPay
+            // 
+            this.lblPay.Location = new System.Drawing.Point(93, 70);
+            this.lblPay.Name = "lblPay";
+            this.lblPay.Size = new System.Drawing.Size(209, 24);
+            this.lblPay.TabIndex = 4;
+            this.lblPay.Text = "0";
+            // 
+            // AccountBalance
+            // 
+            this.AccountBalance.Location = new System.Drawing.Point(93, 112);
+            this.AccountBalance.Name = "AccountBalance";
+            this.AccountBalance.Size = new System.Drawing.Size(209, 24);
+            this.AccountBalance.TabIndex = 5;
+            this.AccountBalance.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.toolStrip2);
@@ -188,6 +263,8 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,6 +284,13 @@
         private System.Windows.Forms.ToolStripStatusLabel lblDate;
         private System.Windows.Forms.ToolStripStatusLabel lblTime;
         private System.Windows.Forms.ToolStripMenuItem btnEditLogin;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label AccountBalance;
+        private System.Windows.Forms.Label lblPay;
+        private System.Windows.Forms.Label lblRecive;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

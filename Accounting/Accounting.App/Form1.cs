@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Accounting.Business;
 using Accounting.Utility.Convertor;
+using Accounting.ViewModels.Accounting;
 
 namespace Accounting.App
 {
@@ -53,6 +55,8 @@ namespace Accounting.App
                 this.Show();
                 lblDate.Text = DateTime.Now.ToShamsi();
                 lblTime.Text = DateTime.Now.ToShortTimeString();
+                Report();
+
             }
             else
             {
@@ -60,6 +64,13 @@ namespace Accounting.App
             }
         }
 
+        void Report()
+        {
+            ReportViewModel report = Account.ReportFormMain();
+            lblPay.Text = report.Pay.ToString("#,0");
+            lblRecive.Text = report.Recive.ToString("#,0");
+            AccountBalance.Text = report.Accountbalance.ToString("#,0");
+        }
         private void btnEditLogin_Click(object sender, EventArgs e)
         {
             frmLogin frmLogin = new frmLogin();
