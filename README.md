@@ -1,2 +1,2 @@
 # Accounting
-This project is for the final project of the university
+This accounting project is written for the final project of the university programming course
