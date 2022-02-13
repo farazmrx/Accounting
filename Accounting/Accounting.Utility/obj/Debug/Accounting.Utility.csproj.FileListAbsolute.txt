@@ -1,0 +1,6 @@
+C:\Users\admin\Desktop\Accounting\Accounting\Accounting.Utility\bin\Debug\Accounting.Utility.dll
+C:\Users\admin\Desktop\Accounting\Accounting\Accounting.Utility\bin\Debug\Accounting.Utility.pdb
+C:\Users\admin\Desktop\Accounting\Accounting\Accounting.Utility\obj\Debug\Accounting.Utility.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\Accounting\Accounting\Accounting.Utility\obj\Debug\Accounting.Utility.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\Accounting\Accounting\Accounting.Utility\obj\Debug\Accounting.Utility.dll
+C:\Users\admin\Desktop\Accounting\Accounting\Accounting.Utility\obj\Debug\Accounting.Utility.pdb

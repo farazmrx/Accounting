@@ -1,0 +1,6 @@
+C:\Users\admin\Desktop\Accounting\Accounting\Accounting.ViewModels\bin\Debug\Accounting.ViewModels.dll
+C:\Users\admin\Desktop\Accounting\Accounting\Accounting.ViewModels\bin\Debug\Accounting.ViewModels.pdb
+C:\Users\admin\Desktop\Accounting\Accounting\Accounting.ViewModels\obj\Debug\Accounting.ViewModels.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\Accounting\Accounting\Accounting.ViewModels\obj\Debug\Accounting.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\Accounting\Accounting\Accounting.ViewModels\obj\Debug\Accounting.ViewModels.dll
+C:\Users\admin\Desktop\Accounting\Accounting\Accounting.ViewModels\obj\Debug\Accounting.ViewModels.pdb
